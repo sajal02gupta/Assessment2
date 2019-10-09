@@ -1,0 +1,33 @@
+<div>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date-of-Birth</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Degree</th>
+        <th scope="col">Marks</th>
+        <th scope="col">Stream</th>
+        <th scope="col">College</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="employees.length > 0">
+      <tr *ngFor="let Employee of employees">
+        <th>{{Employee.eId}}</th>
+        <td>{{Employee.eName}}</td>
+        <td>{{Employee.eDob}}</td>
+        <td>{{Employee.eAdd}}</td>
+        <td>{{Employee.ePhone}}</td>
+        <td>{{Employee.eDegree}}</td>
+        <th>{{Employee.eMarks}}</th>
+        <th>{{Employee.eStream}}</th>
+        <th>{{Employee.eCollege}}</th>
+        <td><a routerLink="edit/{{Employee.eId}}" class="btn btn-sm text-white btn-success">Edit</a>
+          <a routerLink="delete/{{Employee.eId}}" class="btn btn-sm text-white btn-danger">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
